@@ -1,2 +1,2 @@
 # Discord-Auto-Emoji
-Built with python
+This bot is used to automatically put an reactions on posts, is mostly used to enter giveaways.
