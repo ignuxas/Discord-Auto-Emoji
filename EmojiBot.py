@@ -51,8 +51,7 @@ def Server(links):
             if "reactions" in message:
                 if(message["reactions"][0]["me"] == False):
 
-                    #Reikia palaukt nes discord limituoja requestus
-
+                    #Need to sleep here cause Discord limits requests
                     sleep(0.3)
                     r = requests.put("https://discord.com/api/v9/channels/"+link.split("/")[-1]+"/messages/"+message["id"]+"/reactions/"+str(message["reactions"][0]["emoji"]['name']+"/%40me"), headers=headers)
                     print(black+"ServerID: "+link.split("/")[-2] + " ("+link.replace(link.split("/")[-1], '')+")")
